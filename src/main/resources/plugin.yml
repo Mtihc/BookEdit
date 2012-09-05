@@ -1,0 +1,61 @@
+name: BookEdit
+author: Mtihc
+description: Save/load/edit books
+main: com.mtihc.bookedit.v1.plugin.BookEditPlugin
+depend: []
+softdepend: []
+version: 1.0
+commands:
+    book:
+        description: For detailed information, execute /book ?
+        usage: /book ?
+        aliases: []
+permissions:
+    bookedit.admin:
+        default: false
+        description: Grants all permissons, default for OP.
+        children:
+            bookedit.delete: true
+            bookedit.delete-unowned: true
+            bookedit.edit: true
+            bookedit.edit-unowned: true
+            bookedit.info: true
+            bookedit.info-unowned: true
+            bookedit.list: true
+            bookedit.load: true
+            bookedit.load-unowned: true
+            bookedit.save: true
+            bookedit.save-unowned: true
+    bookedit.delete:
+        default: false
+        description: Allows you to delete saved books
+    bookedit.delete-unowned:
+        default: false
+        description: Allows you to delete saved books, of other authors
+    bookedit.edit:
+        default: false
+        description: Allows you to edit a book in your inventory, if you are author
+    bookedit.edit-unowned:
+        default: false
+        description: Allows you to edit a book in your inventory, of any author
+    bookedit.info:
+        default: false
+        description: Allows you to get information about saved books
+    bookedit.info-unowned:
+        default: false
+        description: Allows you to get inforamtion about saved books, of other authors
+    bookedit.list:
+        default: false
+        description: Allows you to list saved books
+    bookedit.load:
+        default: false
+        description: Allows you to load saved books
+    bookedit.load-unowned:
+        default: false
+        description: Allows you to load saved books, of other authors
+    bookedit.save:
+        default: false
+        description: Save the book you're holding
+    bookedit.save-unowned:
+        default: false
+        description: Save the book you're holding, if you're the author
